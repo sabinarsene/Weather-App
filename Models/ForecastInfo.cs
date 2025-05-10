@@ -3,6 +3,7 @@ namespace WeatherApp.Models;
 public class ForecastInfo
 {
     public List<ForecastItem> List { get; set; }
+    public bool UsesCelsius { get; set; } = true;
 
     public class ForecastItem
     {

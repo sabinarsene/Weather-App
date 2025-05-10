@@ -1,20 +1,34 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:WeatherApp.ViewModels"
-             x:Class="WeatherApp.Views.LocationsPage">
+             x:Class="WeatherApp.Views.LocationsPage"
+             BackgroundColor="#3498db">
 
     <ContentPage.BindingContext>
         <vm:LocationsViewModel />
     </ContentPage.BindingContext>
 
-    <CollectionView ItemsSource="{Binding Locations}" SelectionMode="None">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout Padding="10">
-                    <Label Text="{Binding CityName}" FontSize="20"/>
-                    <Button Text="Șterge" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" />
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Locații Salvate" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+            <Button Text="Reîncarcă" Clicked="OnReloadClicked" HorizontalOptions="Center" BackgroundColor="#4CAF50" TextColor="White" />
+            <Label x:Name="EmptyLabel" Text="Nu există locații salvate." FontSize="18" TextColor="White" HorizontalOptions="Center" IsVisible="False" />
+
+            <CollectionView x:Name="LocationsView" ItemsSource="{Binding Locations}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#80FFFFFF" CornerRadius="10" Margin="5" Padding="15">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding CityName}" FontSize="20" TextColor="#333" />
+                                    <Label Text="{Binding Temperature}" FontSize="16" TextColor="#666" />
+                                </VerticalStackLayout>
+                                <Button Text="Șterge" Clicked="OnDeleteClicked" CommandParameter="{Binding CityName}" BackgroundColor="#FF5252" TextColor="White" Grid.Column="1" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

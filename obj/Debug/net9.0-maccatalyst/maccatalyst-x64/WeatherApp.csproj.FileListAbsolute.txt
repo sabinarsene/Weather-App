@@ -299,3 +299,7 @@ C:\Users\Sabin\Desktop\WeatherApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\X
 C:\Users\Sabin\Desktop\WeatherApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\WeatherApp.csproj.Up2Date
 C:\Users\Sabin\Desktop\WeatherApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\WeatherApp.genruntimeconfig.cache
 C:\Users\Sabin\Desktop\WeatherApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\WeatherApp.dll
+C:\Users\Sabin\Desktop\WeatherApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\WeatherApp.sourcelink.json
+C:\Users\Sabin\Desktop\WeatherApp\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\Sabin\Desktop\WeatherApp\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\Sabin\Desktop\WeatherApp\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll

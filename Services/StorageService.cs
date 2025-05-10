@@ -21,15 +21,17 @@ public class StorageService
         await _db.InsertAsync(loc);
     }
 
-    public async Task<List<StoredLocation>> GetLocationsAsync()
+    public async Task<List<StoredLocation>> GetSavedLocationsAsync()
     {
         await InitAsync();
         return await _db.Table<StoredLocation>().ToListAsync();
     }
 
-    public async Task DeleteLocationAsync(StoredLocation loc)
+    public async Task DeleteLocationAsync(string cityName)
     {
         await InitAsync();
-        await _db.DeleteAsync(loc);
+        var loc = await _db.Table<StoredLocation>().Where(x => x.CityName == cityName).FirstOrDefaultAsync();
+        if (loc != null)
+            await _db.DeleteAsync(loc);
     }
 }

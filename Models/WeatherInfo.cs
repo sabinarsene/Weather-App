@@ -5,6 +5,7 @@ public class WeatherInfo
     public MainInfo Main { get; set; }
     public List<WeatherDescription> Weather { get; set; }
     public string Name { get; set; }
+    public bool UsesCelsius { get; set; } = true;
 
     public class MainInfo
     {

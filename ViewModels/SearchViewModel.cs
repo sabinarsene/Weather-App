@@ -5,7 +5,7 @@ using WeatherApp.Services;
 
 namespace WeatherApp.ViewModels;
 
-public class SearchViewModel : INotifyPropertyChanged
+public class SearchViewModel : BaseViewModel
 {
     private string _cityName = "";
     private WeatherInfo? _weather;
@@ -14,13 +14,13 @@ public class SearchViewModel : INotifyPropertyChanged
     public string CityName
     {
         get => _cityName;
-        set { _cityName = value; OnPropertyChanged(); }
+        set { SetProperty(ref _cityName, value); }
     }
 
     public WeatherInfo? Weather
     {
         get => _weather;
-        set { _weather = value; OnPropertyChanged(); }
+        set { SetProperty(ref _weather, value); }
     }
 
     public async Task LoadWeatherAsync()
@@ -37,8 +37,4 @@ public class SearchViewModel : INotifyPropertyChanged
             Preferences.Set("last_city", Weather?.Name ?? CityName);
         }
     }
-
-    public event PropertyChangedEventHandler? PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName] string name = "") =>
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }

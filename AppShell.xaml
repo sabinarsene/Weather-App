@@ -26,6 +26,11 @@
         Title="Prognoză"
         ContentTemplate="{DataTemplate views:ForecastPage}" />
 
+	<!-- Setări -->
+	<ShellContent
+        Title="Setări"
+        ContentTemplate="{DataTemplate views:SettingsPage}" />
+
 	<!-- Despre aplicație -->
 	<ShellContent
         Title="Despre"

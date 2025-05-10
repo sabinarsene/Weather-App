@@ -1,24 +1,40 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:WeatherApp.ViewModels"
-             x:Class="WeatherApp.Views.SearchPage">
+             x:Class="WeatherApp.Views.SearchPage"
+             BackgroundColor="#3498db">
 
     <ContentPage.BindingContext>
         <vm:SearchViewModel />
     </ContentPage.BindingContext>
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15">
-            <Label Text="Caută un oraș" FontSize="24" />
-            <Entry Placeholder="Ex: Cluj-Napoca" Text="{Binding CityName}" />
-            <Button Text="Caută" Clicked="OnSearchClicked" />
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Caută un oraș" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+            
+            <Frame BackgroundColor="#80FFFFFF" CornerRadius="10" Margin="5" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Entry Placeholder="Ex: Cluj-Napoca" Text="{Binding CityName}" PlaceholderColor="#999" TextColor="#333" />
+                    <Button Text="Caută" Clicked="OnSearchClicked" BackgroundColor="#4CAF50" TextColor="White" />
+                </VerticalStackLayout>
+            </Frame>
 
-            <Label Text="{Binding Weather.Name}" FontSize="20" />
-            <Label Text="{Binding Weather.Main.Temp, StringFormat='Temperatură: {0}°C'}" />
-            <Label Text="{Binding Weather.Main.Humidity, StringFormat='Umiditate: {0}%'}" />
-            <Label Text="{Binding Weather.Weather[0].Description}" />
-
-            <Button Text="Salvează orașul" IsVisible="{Binding Weather}" Clicked="OnSaveClicked" />
+            <Frame BackgroundColor="#80FFFFFF" CornerRadius="10" Margin="5" Padding="15" IsVisible="{Binding Weather, Converter={StaticResource NotNullConverter}}">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="{Binding Weather.Name}" FontSize="24" TextColor="#333" />
+                    <Label FontSize="18" TextColor="#666">
+                        <Label.Text>
+                            <MultiBinding StringFormat="Temperatură: {0}{1}">
+                                <Binding Path="Weather.Main.Temp" />
+                                <Binding Path="Weather.UsesCelsius" Converter="{StaticResource TempUnitConverter}" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                    <Label Text="{Binding Weather.Main.Humidity, StringFormat='Umiditate: {0}%'}" FontSize="18" TextColor="#666" />
+                    <Label Text="{Binding Weather.Weather[0].Description}" FontSize="18" TextColor="#666" />
+                    <Button Text="Salvează orașul" Clicked="OnSaveClicked" BackgroundColor="#4CAF50" TextColor="White" Margin="0,10,0,0" />
+                </VerticalStackLayout>
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

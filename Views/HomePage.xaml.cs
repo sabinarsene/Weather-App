@@ -9,10 +9,15 @@ public partial class HomePage : ContentPage
     public HomePage()
     {
         InitializeComponent();
-        Loaded += async (_, _) => await ViewModel.LoadWeatherAsync();
+    }
+    
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await ViewModel.LoadWeatherAsync();
     }
 
-    private async void OnShowWeatherClicked(object sender, EventArgs e)
+    private async void OnReloadClicked(object sender, EventArgs e)
     {
         await ViewModel.LoadWeatherAsync();
     }

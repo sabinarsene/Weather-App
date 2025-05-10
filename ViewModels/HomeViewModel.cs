@@ -6,26 +6,51 @@ using Microsoft.Maui.Storage;
 
 namespace WeatherApp.ViewModels;
 
-public class HomeViewModel : INotifyPropertyChanged
+public class HomeViewModel : BaseViewModel
 {
     private string _cityName = "Bucuresti";
     private WeatherInfo? _weather;
+    private string _temperature = "-";
+    private string _description = "-";
 
     public string CityName
     {
         get => _cityName;
-        set { _cityName = value; OnPropertyChanged(); }
+        set { SetProperty(ref _cityName, value); }
     }
 
     public WeatherInfo? Weather
     {
         get => _weather;
-        set { _weather = value; OnPropertyChanged(); }
+        set 
+        { 
+            if (SetProperty(ref _weather, value))
+            {
+                // Actualizează proprietățile derivate
+                if (value?.Main != null)
+                {
+                    string unit = value.UsesCelsius ? "°C" : "°F";
+                    Temperature = $"{value.Main.Temp}{unit}";
+                }
+                if (value?.Weather != null && value.Weather.Count > 0)
+                {
+                    Description = value.Weather[0].Description;
+                }
+            }
+        }
     }
 
-    public event PropertyChangedEventHandler? PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName] string name = "") =>
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    public string Temperature
+    {
+        get => _temperature;
+        set { SetProperty(ref _temperature, value); }
+    }
+
+    public string Description
+    {
+        get => _description;
+        set { SetProperty(ref _description, value); }
+    }
 
     public async Task LoadWeatherAsync()
     {
@@ -35,6 +60,8 @@ public class HomeViewModel : INotifyPropertyChanged
         CityName = Preferences.Get("last_city", "Bucuresti");
 
         Weather = await service.GetWeatherAsync(CityName);
+        
+        // Salvează orașul curent pentru viitoare utilizări
+        Preferences.Set("last_city", CityName);
     }
-
 }

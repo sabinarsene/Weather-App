@@ -1,4 +1,4 @@
-using WeatherApp.ViewModels;
+﻿using WeatherApp.ViewModels;
 
 namespace WeatherApp.Views;
 
@@ -9,6 +9,11 @@ public partial class ForecastPage : ContentPage
     public ForecastPage()
     {
         InitializeComponent();
-        Loaded += async (_, _) => await ViewModel.LoadForecastAsync();
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await ViewModel.LoadForecastAsync();
     }
 }

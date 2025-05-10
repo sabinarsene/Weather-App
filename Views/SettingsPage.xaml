@@ -1,0 +1,43 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:WeatherApp.ViewModels"
+             x:Class="WeatherApp.Views.SettingsPage"
+             BackgroundColor="#3498db">
+
+    <ContentPage.BindingContext>
+        <vm:SettingsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Setări" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+
+            <Frame BackgroundColor="#80FFFFFF" CornerRadius="10" Margin="5" Padding="15">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Unitate de temperatură" FontSize="20" TextColor="#333" />
+                    <Grid ColumnDefinitions="*,*">
+                        <RadioButton Content="Celsius (°C)" IsChecked="{Binding IsCelsius}" GroupName="TemperatureUnit" />
+                        <RadioButton Content="Fahrenheit (°F)" IsChecked="{Binding IsFahrenheit}" GroupName="TemperatureUnit" Grid.Column="1" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#80FFFFFF" CornerRadius="10" Margin="5" Padding="15">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Limbă" FontSize="20" TextColor="#333" />
+                    <Picker Title="Selectează limba" SelectedItem="{Binding SelectedLanguage}" ItemsSource="{Binding AvailableLanguages}" TextColor="White" TitleColor="White" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#80FFFFFF" CornerRadius="10" Margin="5" Padding="15">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Notificări" FontSize="20" TextColor="#333" />
+                    <CheckBox IsChecked="{Binding EnableNotifications}" />
+                    <Label Text="Activează notificările zilnice" VerticalOptions="Center" TextColor="#666" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Salvează setările" Clicked="OnSaveClicked" BackgroundColor="#4CAF50" TextColor="White" Margin="0,10,0,0" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage> 

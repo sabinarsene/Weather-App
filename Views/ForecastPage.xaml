@@ -1,7 +1,8 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:WeatherApp.ViewModels"
-             x:Class="WeatherApp.Views.ForecastPage">
+             x:Class="WeatherApp.Views.ForecastPage"
+             BackgroundColor="#3498db">
 
     <ContentPage.BindingContext>
         <vm:ForecastViewModel />
@@ -9,24 +10,18 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="10">
-            <Label Text="Prognoză 5 zile" FontSize="24" />
+            <Label Text="Prognoză 5 zile" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+            <Label Text="{Binding CityName}" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
 
             <CollectionView ItemsSource="{Binding DailyForecasts}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                        <Frame BackgroundColor="#80FFFFFF" CornerRadius="10" Margin="5" Padding="15">
                             <VerticalStackLayout>
-                                <Label Text="{Binding Dt, StringFormat='{}{0:dd/MM/yyyy}'}"
-                                       FontSize="18"
-                                       TextColor="DarkSlateGray">
-                                    <Label.BindingContext>
-                                        <x:Static Member="DateTimeOffset.Now" />
-                                    </Label.BindingContext>
-                                </Label>
-
-                                <Label Text="{Binding Main.Temp, StringFormat='Temperatură: {0}°C'}" />
-                                <Label Text="{Binding Main.Humidity, StringFormat='Umiditate: {0}%'}" />
-                                <Label Text="{Binding Weather[0].Description}" />
+                                <Label Text="{Binding DateText}" FontSize="20" TextColor="#333" />
+                                <Label Text="{Binding Temperature}" FontSize="18" TextColor="#666" />
+                                <Label Text="{Binding Humidity}" FontSize="18" TextColor="#666" />
+                                <Label Text="{Binding Description}" FontSize="18" TextColor="#666" />
                             </VerticalStackLayout>
                         </Frame>
                     </DataTemplate>
