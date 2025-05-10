@@ -1,0 +1,24 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:WeatherApp.ViewModels"
+             x:Class="WeatherApp.Views.SearchPage">
+
+    <ContentPage.BindingContext>
+        <vm:SearchViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Caută un oraș" FontSize="24" />
+            <Entry Placeholder="Ex: Cluj-Napoca" Text="{Binding CityName}" />
+            <Button Text="Caută" Clicked="OnSearchClicked" />
+
+            <Label Text="{Binding Weather.Name}" FontSize="20" />
+            <Label Text="{Binding Weather.Main.Temp, StringFormat='Temperatură: {0}°C'}" />
+            <Label Text="{Binding Weather.Main.Humidity, StringFormat='Umiditate: {0}%'}" />
+            <Label Text="{Binding Weather.Weather[0].Description}" />
+
+            <Button Text="Salvează orașul" IsVisible="{Binding Weather}" Clicked="OnSaveClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:WeatherApp.ViewModels"
+             x:Class="WeatherApp.Views.ForecastPage">
+
+    <ContentPage.BindingContext>
+        <vm:ForecastViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Prognoză 5 zile" FontSize="24" />
+
+            <CollectionView ItemsSource="{Binding DailyForecasts}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Dt, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                       FontSize="18"
+                                       TextColor="DarkSlateGray">
+                                    <Label.BindingContext>
+                                        <x:Static Member="DateTimeOffset.Now" />
+                                    </Label.BindingContext>
+                                </Label>
+
+                                <Label Text="{Binding Main.Temp, StringFormat='Temperatură: {0}°C'}" />
+                                <Label Text="{Binding Main.Humidity, StringFormat='Umiditate: {0}%'}" />
+                                <Label Text="{Binding Weather[0].Description}" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

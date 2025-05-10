@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="WeatherApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:WeatherApp.Views"
+    Title="WeatherApp">
+
+	<!-- Pagina principală -->
+	<ShellContent
+        Title="Acasă"
+        ContentTemplate="{DataTemplate views:HomePage}" />
+
+	<!-- Căutare oraș -->
+	<ShellContent
+        Title="Caută"
+        ContentTemplate="{DataTemplate views:SearchPage}" />
+
+	<!-- Locații salvate -->
+	<ShellContent
+        Title="Locații Salvate"
+        ContentTemplate="{DataTemplate views:LocationsPage}" />
+
+	<!-- Prognoză -->
+	<ShellContent
+        Title="Prognoză"
+        ContentTemplate="{DataTemplate views:ForecastPage}" />
+
+	<!-- Despre aplicație -->
+	<ShellContent
+        Title="Despre"
+        ContentTemplate="{DataTemplate views:AboutPage}" />
+
+</Shell>

@@ -1,0 +1,19 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:WeatherApp.ViewModels"
+             x:Class="WeatherApp.Views.AboutPage"
+             Title="Despre aplicație">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="{Binding AppName}" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="{Binding Version}" FontSize="18" HorizontalOptions="Center" />
+            <Label Text="{Binding Description}" />
+            <Button Text="Vizitează OpenWeather" Clicked="OnOpenLinkClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

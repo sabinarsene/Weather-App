@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|c:\\users\\sabin\\desktop\\weatherapp\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|solutionrelative:views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|c:\\users\\sabin\\desktop\\weatherapp\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|solutionrelative:views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|c:\\users\\sabin\\desktop\\weatherapp\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|solutionrelative:services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Sabin\\Desktop\\WeatherApp\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|c:\\users\\sabin\\desktop\\weatherapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|c:\\users\\sabin\\desktop\\weatherapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{093F238F-368B-45D2-96A4-59FC129E3166}|WeatherApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\Views\\HomePage.xaml",
+              "RelativeDocumentMoniker": "Views\\HomePage.xaml",
+              "ToolTip": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\Views\\HomePage.xaml",
+              "RelativeToolTip": "Views\\HomePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-10T16:23:41.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\Views\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\HomePage.xaml.cs",
+              "ToolTip": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\Views\\HomePage.xaml.cs",
+              "RelativeToolTip": "Views\\HomePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T16:23:29.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherService.cs",
+              "DocumentMoniker": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\Services\\WeatherService.cs",
+              "RelativeDocumentMoniker": "Services\\WeatherService.cs",
+              "ToolTip": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\Services\\WeatherService.cs",
+              "RelativeToolTip": "Services\\WeatherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T16:16:58.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAswEQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T16:16:24.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T16:11:58.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\Users\\Sabin\\Desktop\\WeatherApp\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-10T16:10:44.722Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
